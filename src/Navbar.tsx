@@ -1,15 +1,12 @@
 import { Button } from "./components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "./components/ui/avatar";
 import { ReloadIcon } from "@radix-ui/react-icons";
-import { imgdata } from "./store/const";
 import { cn } from "./lib/utils";
 import { useTheme } from "./components/theme-provider";
 import { ModeToggle } from "./components/mode-toggle";
 
 export default function Navbar() {
   const { theme } = useTheme();
-
-  const image = imgdata.adeeti?.img;
 
   return (
     <header
@@ -47,12 +44,10 @@ export default function Navbar() {
                 <AvatarFallback>U</AvatarFallback>
               </Avatar>
             </Button>
-            <ModeToggle/>
+            <ModeToggle />
           </div>
         </nav>
       </div>
     </header>
   );
 }
-
-
